@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Download, Copy, Check, X, ShieldCheck, QrCode, Smartphone } from 'lucide-react';
-import { QRCodeSVG } from 'qrcode.react';
 
 export default function WireGuardModal({ subscriber, onClose }) {
   const [copied, setCopied] = useState(false);
@@ -19,6 +18,8 @@ Endpoint = 185.220.101.1:51820
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
 `;
+
+  const qrImageUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(confContent)}`;
 
   const copyConfig = () => {
     navigator.clipboard.writeText(confContent);
@@ -95,16 +96,16 @@ PersistentKeepalive = 25
         </div>
 
         {activeTab === 'qr' ? (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px', padding: '16px 0' }}>
-            <div style={{ padding: '16px', background: '#ffffff', borderRadius: '12px', boxShadow: '0 0 20px rgba(16,185,129,0.3)' }}>
-              <QRCodeSVG value={confContent} size={180} />
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px', padding: '12px 0' }}>
+            <div style={{ padding: '12px', background: '#ffffff', borderRadius: '12px', boxShadow: '0 0 20px rgba(16,185,129,0.3)' }}>
+              <img src={qrImageUrl} alt="WireGuard QR Code" style={{ width: '220px', height: '220px', display: 'block' }} />
             </div>
 
             <div style={{ textAlign: 'center', fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
               <div style={{ fontWeight: 700, color: '#f8fafc', marginBottom: '4px' }}>📱 How to Scan from your Phone:</div>
               1. Open the <b>WireGuard</b> app on your iPhone or Android.<br />
               2. Tap <b>+</b> ➔ <b>Create from QR code</b>.<br />
-              3. Point your camera at this screen and tap <b>Save</b>!
+              3. Point your camera at this QR code and tap <b>Save</b>!
             </div>
           </div>
         ) : (
