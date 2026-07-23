@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Activity, Server, Radio, Sun, Users, Shield, ArrowUpRight, ArrowDownRight, Zap, RefreshCw, CheckCircle2, AlertTriangle, Plus } from 'lucide-react';
+import { Activity, Server, Radio, Sun, Users, Shield, ArrowUpRight, ArrowDownRight, Zap, RefreshCw, CheckCircle2, AlertTriangle, Plus, Globe } from 'lucide-react';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
