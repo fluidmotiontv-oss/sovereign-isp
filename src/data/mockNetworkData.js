@@ -155,6 +155,7 @@ export const bgpPeers = [
 ];
 
 export const subscribersData = [
+  { id: "SUB-0911", handle: "dragon9ph.mesh", address: "Mobile Phone Node", tier: "Fiber Core (1 Gbps)", planPrice: "$50 / mo (or 50 MESH)", balance: "500 MESH", status: "Active", wgPrivateKey: "eK9v2M8Pq1wE5rT0yU4iO7aS3dF6gH8jK9xV4bZ1nM8=", wgPublicKey: "9xK2...mL8P=", dataUsedGb: 12.4, ip: "10.64.10.99" },
   { id: "SUB-0912", handle: "alice.mesh", address: "Rooftop 4A - North Ave", tier: "Community Sovereign (100 Mbps)", planPrice: "$25 / mo (or 25 MESH)", balance: "120 MESH", status: "Active", wgPublicKey: "9xK2...mL8P=", dataUsedGb: 482.4, ip: "10.64.10.14" },
   { id: "SUB-0913", handle: "bob.sovereign", address: "Solar Cabin 12", tier: "Fiber Core (1 Gbps)", planPrice: "$50 / mo (or 50 MESH)", balance: "45 MESH", status: "Active", wgPublicKey: "3bF9...qZ1X=", dataUsedGb: 1204.1, ip: "10.64.10.19" },
   { id: "SUB-0914", handle: "charlie.node", address: "Hilltop Barn", tier: "Host Node Relay (Free 1Gbps)", planPrice: "$0 (Relay Host)", balance: "410 MESH", status: "Active", wgPublicKey: "7vR4...wK9N=", dataUsedGb: 3410.8, ip: "10.64.1.15" },
